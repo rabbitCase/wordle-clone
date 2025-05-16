@@ -1,4 +1,5 @@
 # Wordle Clone
+<a href="https://rabbitcase.github.io/wordle-clone/">Live Preview</a>
 ## Rules 
 - Program selects a random word
 - You enter your guess
