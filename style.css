@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap');
+body{
+    margin:0;
+    height: 100vh;
+    background-color: #121212;
+}
+h1{
+    color: rgb(212, 1, 205);
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Faustina', 'ariel';
+}
+#game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+.row-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+}
+.row{
+    border: 2px solid rgb(104, 104, 104);
+    height: 60px;
+    width: 60px;
+    border-radius: 2px;
+    margin: 5px;
+    background: none;
+    color: rgb(230, 230, 230);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
