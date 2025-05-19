@@ -54,12 +54,12 @@ document.addEventListener('keydown', (event) => {
         }
 
     }
-    else if (!/^[a-zA-Z]$/.test(event.key)) {
+    else if (!/^[a-zA-Z]$/.test(event.key)) {//only a-z allowed
         return;
     }
-    else if(checkpoint.includes(i) && !isChecked){
-        if(findword(i-5)){
-            wordcheck(i-5);
+    else if(checkpoint.includes(i) && !isChecked){//five characters are already entered...
+        if(findword(i-5)){//...and the word exists in the list
+            wordcheck(i-5);//then check the word instead of accepting another character
             isChecked = true;
             checked.push(checkpoint.shift());
             return;
