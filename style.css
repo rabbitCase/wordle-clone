@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap');
 body{
     margin:0;
-    height: 100vh;
     background-color: #121212;
 }
 h1{
-    color: rgb(212, 1, 205);
+    color: rgb(151, 252, 255);
     text-align: center;
     font-size: 45px;
     font-family: 'Faustina', 'ariel';
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #02afff, 0 0 0.5em #0be3ff, 0 0 0.1em #03b8ff;
+    transition: text-shadow 0.9s ease;
 }
 #game-container{
     display: flex;
@@ -26,14 +27,74 @@ h1{
 }
 .row{
     border: 2px solid rgb(104, 104, 104);
-    height: 60px;
-    width: 60px;
     border-radius: 2px;
-    margin: 5px;
+    height: 48px;
+    width: 45px;
+    margin: 3px;
+    margin-bottom: 5px;
     background: none;
     color: rgb(230, 230, 230);
     font-size: 40px;
     font-weight: 700;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 550px;
+}
+#keyboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 4px;
+}
+#row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 48px;
+    width: 520px;
+}
+#row2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 48px;
+    width: 460px;
+}
+#row3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 48px;
+    width: 520px;
+}
+.letter, .spec-letter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: rgb(213, 213, 213);
+    background-color: grey;
+    font-family: 'Faustina', 'ariel';
+    font-weight: 700;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+.spec-letter{
+    width: 75px;
+    height: 45px;
 }
