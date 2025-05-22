@@ -1,7 +1,7 @@
 import {list} from './wordlist.js';
 
-const word = Array.from(list[Math.floor(Math.random() * list.length)].toUpperCase());
-
+// const word = Array.from(list[Math.floor(Math.random() * list.length)].toUpperCase());
+const word = ['T','R','A','D','E'];
 let checkpoint = [5,10,15,20,25,30];
 let checked = [];//if index is included in a checked word, disable backspace for that index and all indices preceeding it
 
@@ -190,7 +190,17 @@ function fillKey(value, color){
     const letters = document.querySelectorAll("#keyboard > div > div");
         for(let letter of letters){
             if(letter.textContent == value){
-                letter.style.backgroundColor = `${color}`;
+                console.log("found");
+                    if(color == '#3A3A3C'){
+                        console.log("color selected is grey");
+                        console.log(letter.style.backgroundColor);
+                        if(letter.style.backgroundColor == 'rgb(83, 141, 78)' || letter.style.backgroundColor == 'rgb(181, 159, 59)'){
+                            console.log("already some other color");
+                        return;
+                        }
+                    }
+                console.log("not returned")
+                letter.style.backgroundColor = color;
                 break;
             }
         }
