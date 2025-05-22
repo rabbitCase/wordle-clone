@@ -56,16 +56,16 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-document.getElementById('backspace').addEventListener('click', () =>{
+document.getElementById('backspace').addEventListener('touchstart', () =>{
     handleBackspace();
 });
 
-document.getElementById('enter').addEventListener('click', () =>{
+document.getElementById('enter').addEventListener('touchstart', () =>{
     handleEnter();
 })
 
 document.querySelectorAll('#keyboard > div').forEach(div => {
-    div.addEventListener('click', (event) => {
+    div.addEventListener('touchstart', (event) => {
         if(event.target.className == 'letter'){
             if(stopFlag){
                 return;
