@@ -1,5 +1,5 @@
 # Wordle Clone
-<a href="https://rabbitcase.github.io/wordle-clone/">Live Preview</a>
+<a href="https://rabbitcase.github.io/wordle-clone/" target='_blank'>Live Preview</a>
 ## Rules 
 - Program selects a random word
 - You enter your guess
@@ -13,7 +13,7 @@
 ## Search Logic and Error Handling
 #### There are a few error prone cases we need to handle if we use linear string searching:
 - If the word is 'mouth' and user enters 'stool', both 'o' becomes yellow, indicating that two 'o's exists in some other position, which is incorrect.
-- If the word is 'mouth' and user enters 'teeth', the first 't' becomes yellow but the last 't' becomes green. The first yellow 't' suggests that there is another 't' somwhere else, which is incorrect.
+- If the word is 'mouth' and user enters 'teeth', the first 't' becomes yellow but the last 't' becomes green. The first yellow 't' suggests that there is another 't' somwhere else (apart from the matched 't'), which is incorrect.
 #### These can be resolved by:
 - Initializing a map() which stores the frequency of every character in the selected word
 - If there is a match, the character turns green and reduces the frequency of the matched character by one
