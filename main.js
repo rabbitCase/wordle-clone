@@ -189,16 +189,12 @@ function fillKey(value, color){
     const letters = document.querySelectorAll("#keyboard > div > div");
         for(let letter of letters){
             if(letter.textContent == value){
-                console.log("found");
                     if(color == '#3A3A3C'){
-                        console.log("color selected is grey");
                         console.log(letter.style.backgroundColor);
                         if(letter.style.backgroundColor == 'rgb(83, 141, 78)' || letter.style.backgroundColor == 'rgb(181, 159, 59)'){
-                            console.log("already some other color");
                         return;
                         }
                     }
-                console.log("not returned")
                 letter.style.backgroundColor = color;
                 break;
             }
