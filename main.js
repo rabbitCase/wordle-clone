@@ -1,7 +1,6 @@
 import {list} from './wordlist.js';
 
-// const word = Array.from(list[Math.floor(Math.random() * list.length)].toUpperCase());
-const word = ['T','R','A','D','E'];
+const word = Array.from(list[Math.floor(Math.random() * list.length)].toUpperCase());
 let checkpoint = [5,10,15,20,25,30];
 let checked = [];//if index is included in a checked word, disable backspace for that index and all indices preceeding it
 
