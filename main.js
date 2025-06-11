@@ -1,6 +1,7 @@
 import {list} from './wordlist.js';
 
 const word = Array.from(list[Math.floor(Math.random() * list.length)].toUpperCase());
+
 let checkpoint = [5,10,15,20,25,30];
 let checked = [];//if index is included in a checked word, disable backspace for that index and all indices preceeding it
 
@@ -187,16 +188,13 @@ function findWord(index){
 
 function fillKey(value, color){
     const letters = document.querySelectorAll("#keyboard > div > div");
-        for(let letter of letters){
-            if(letter.textContent == value){
-                    if(color == '#3A3A3C'){
-                        console.log(letter.style.backgroundColor);
-                        if(letter.style.backgroundColor == 'rgb(83, 141, 78)' || letter.style.backgroundColor == 'rgb(181, 159, 59)'){
-                        return;
-                        }
-                    }
-                letter.style.backgroundColor = color;
-                break;
+    for(let letter of letters){
+        if(letter.textContent == value){
+            const computedStyle = window.getComputedStyle(letter);
+            if(computedStyle.backgroundColor == 'rgb(83, 141, 78)' || computedStyle.backgroundColor == 'rgb(181, 159, 59)' && color == '#3A3A3C'){
+                return;
             }
+            letter.style.backgroundColor = color;
         }
+    };
 }

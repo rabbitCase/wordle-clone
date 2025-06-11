@@ -54,6 +54,7 @@ h1{
     margin: 10px;
     gap: 4px;
 }
+
 #row1{
     display: flex;
     justify-content: center;
@@ -84,7 +85,7 @@ h1{
     align-items: center;
     border-radius: 5px;
     color: rgb(213, 213, 213);
-    background-color: grey;
+    background-color: rgb(128, 128, 128);
     font-family: 'Faustina', 'ariel';
     font-weight: 700;
     font-size: 20px;
